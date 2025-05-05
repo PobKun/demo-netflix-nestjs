@@ -11,10 +11,7 @@ export class MovieDto {
   type: string;
 
   @ApiProperty()
-  synopsis_th: string;
-
-  @ApiProperty()
-  synopsis_en: string;
+  synopsis: string;
 
   @ApiProperty()
   trailer_embed_url: string;
