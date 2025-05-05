@@ -1,9 +1,21 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { GlobalExceptionFilter } from './common/exception-filters/global-exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.enableCors({
+    origin: [
+      'http://localhost:3737',
+      'https://demo-movie-nextjs.wareeasy.com',
+    ],
+    methods: ["GET"],
+    credentials: true,
+  });
+
+  app.useGlobalFilters(new GlobalExceptionFilter())
 
   const config = new DocumentBuilder()
   .setTitle('Demo Movie API')
