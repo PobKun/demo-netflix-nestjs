@@ -21,6 +21,9 @@ export class MovieDto {
 
   @ApiProperty()
   image_cover: string;
+
+  @ApiProperty()
+  image_logo: string;
   
   @ApiProperty()
   top10: number;

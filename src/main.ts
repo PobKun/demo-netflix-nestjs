@@ -9,6 +9,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3737',
+      'http://192.168.200.46:3737',
       'https://demo-movie-nextjs.wareeasy.com',
     ],
     methods: ["GET"],

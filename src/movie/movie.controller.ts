@@ -68,7 +68,7 @@ export class MovieController {
 
   @Get('categorized')
   @ApiHeader({name: 'x-api-lang',required: true,description: '"th" or "en"',schema: {type: 'string',enum: ['th', 'en'],},})  
-  @ApiResponse({ status: 200, description: 'หนังทั้งหมดแบ่งตาม category + popular', schema: { type: 'object', properties: { popular: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, series: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, cartoon: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, movie: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, tvshow: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } } } } })
+  @ApiResponse({ status: 200, description: 'หนังทั้งหมดแบ่งตาม category + popular', schema: { type: 'object', properties: { Popular: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, Series: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, Cartoon: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, Movie: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } }, TvShow: { type: 'array', items: { $ref: getSchemaPath(MovieDto) } } } } })
   async getAllCategorized() {
     const response = await this.movieService.getAllMoviesCategorized();
     if(!response.success) {
