@@ -6,8 +6,8 @@ import { I18nContext } from 'nestjs-i18n';
 
 @Injectable()
 export class MovieService {
-  // private baseUrl = 'https://demo-movie-api.wareeasy.com';
-  private baseUrl = 'http://localhost:3838';
+  private baseUrl = 'https://demo-movie-api.wareeasy.com';
+  // private baseUrl = 'http://localhost:3838';
 
   constructor(
     private readonly httpService: HttpService,
