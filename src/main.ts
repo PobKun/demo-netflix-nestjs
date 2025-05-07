@@ -10,7 +10,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:3737',
       'http://192.168.200.46:3737',
-      'https://demo-movie-nextjs.wareeasy.com',
+      'https://demo-netflix-nextjs.wareeasy.com'
     ],
     methods: ["GET"],
     credentials: true,
