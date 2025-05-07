@@ -4,6 +4,7 @@ Run development server:
 npm install
 npm npm run start:dev
 ```
+(RUN Port: 3939)
 
 Run production server:
 ```bash
@@ -11,6 +12,7 @@ npm install
 npm run build
 npm run start:prod
 ```
+(RUN Port: 3939)
 
 ## Library & Features
 - nestjs-i18n (Localization i18n)
